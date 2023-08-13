@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Board {
+public class Quiz {
     @Id //pk를 의미함
     @GeneratedValue(strategy = GenerationType.IDENTITY) //전력을 어케할거냐
     private Integer id;

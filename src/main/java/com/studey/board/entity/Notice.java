@@ -9,9 +9,9 @@ import javax.persistence.Id;
 
 @Entity
 @Data
-public class Board {
-    @Id //pk를 의미함
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //전력을 어케할거냐
+public class Notice {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
     private String content;

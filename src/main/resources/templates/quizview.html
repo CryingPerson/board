@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>퀴즈 상세 페이지</title>
+</head>
+<body>
+
+<h1 th:text="${quiz.title}">제목입니다.</h1>
+<p th:text="${quiz.content}">내용이 들어갈 부분입니다.</p>
+<a th:href="@{${quiz.filepath}}">다운받기</a>
+<a th:href="@{/quiz/modify/{id}(id = ${quiz.id})}">수정</a>
+</body>
+</html>

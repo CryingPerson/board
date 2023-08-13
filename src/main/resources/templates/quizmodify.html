@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org ">
 <head>
-    <meta charset="UTF-8">
-    <title>게시물 작성폼</title>
+  <meta charset="UTF-8">
+  <title>퀴즈 문제</title>
 </head>
-
 <style>
 
     .layout {
@@ -26,14 +25,12 @@
 
 </style>
 <body>
-<h1>게시글 작성</h1>
 <div class="layout">
-    <form action="/board/writepro" method="post" enctype="multipart/form-data">
-        <input name="title" type="text">
-        <textarea name="content"></textarea>
-        <input type="file" name="file">
-        <button type="submit">작성</button>
-    </form>
+  <form th:action="@{/quiz/update/{id}(id=${quiz.id})}" method="post">
+    <input name="title" type="text" th:value="${quiz.title}">
+    <textarea name="content" th:text="${quiz.content}" ></textarea>
+    <button type="submit">수정</button>
+  </form>
 </div>
 </body>
 </html>
